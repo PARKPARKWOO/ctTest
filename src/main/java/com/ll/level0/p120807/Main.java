@@ -1,5 +1,7 @@
 package com.ll.level0.p120807;
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -7,12 +9,12 @@ public class Main {
 }
 
 class Solution {
-    public int[] solution(int[] num_list) {
-        int[] answer = new int[2];
-
-        for(int i = 0; i < num_list.length; i++)
-            answer[num_list[i] % 2]++;
-
+    public int solution(int[] sides) {
+        int answer = 0;
+        Arrays.sort(sides);
+        if (sides[2] - sides[1] - sides[0] >= 0){
+            answer = 2;
+        } else {answer = 1;}
         return answer;
     }
 }
