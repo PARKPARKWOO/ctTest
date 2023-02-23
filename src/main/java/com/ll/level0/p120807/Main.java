@@ -7,11 +7,12 @@ public class Main {
 }
 
 class Solution {
-    public int solution(int angle) {
-        if (angle == 180) return 4;
-        else if (angle > 90) return 3;
-        else if (angle == 90) return 2;
+    public int[] solution(int[] num_list) {
+        int[] answer = new int[2];
 
-        return 1;
+        for(int i = 0; i < num_list.length; i++)
+            answer[num_list[i] % 2]++;
+
+        return answer;
     }
 }
